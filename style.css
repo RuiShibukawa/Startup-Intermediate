@@ -1,25 +1,5 @@
-
-:root{
-    --cor-botao: #6562df;
-    --letra-botao: #ffffff;
-    --fundo-input: #ececec;
-    --texto-padrao: #535353;
-    --azul-calendario: #3fd5e9;
-    --verde-calendario: #4eee0d;
-    --vermelho-calendario: #ee0d0d;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 1rem;
-    color: var(--texto-padrao);
 }

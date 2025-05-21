@@ -1,14 +1,3 @@
-
-:root{
-    --cor-botao: #6562df;
-    --letra-botao: #ffffff;
-    --fundo-input: #ececec;
-    --texto-padrao: #535353;
-    --azul-calendario: #3fd5e9;
-    --verde-calendario: #4eee0d;
-    --vermelho-calendario: #ee0d0d;
-}
-
 * {
     margin: 0;
     padding: 0;

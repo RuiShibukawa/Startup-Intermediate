@@ -23,3 +23,7 @@ body{
     gap: 1rem;
     color: var(--texto-padrao);
 }
+button{
+    background-color: var(--cor-botao);
+    color: var(--letra-botao);
+}

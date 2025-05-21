@@ -6,21 +6,30 @@
     .botoes{
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+        width: 20%;
     }
+    #criarconta{
+        padding: 0.5rem;
+        border-radius: 1.5rem; 
+    }
+    #Entre{
+        padding: 1.5rem;
+        border-radius: 1rem;
+    }
+
    </style>
 </head>
 <body>
     <img src="img/logoempresa.jpg" alt="" width= 200px height="200px" > 
-    <h2>E-mail</h2>
-    <label for="emailparalogin"></label>
+    <label for="emailparalogin">E-mail</label>
     <input type="text" name="" id="emailparalogin" placeholder="hello@email.com">
-    <h2>Senha</h2>
-    <label for="senhaparalogin"></label>
+    <label for="senhaparalogin">Senha</label>
     <input type="password" name="" id="senhaparalogin" placeholder="*********">
     <label for="Entre"></label> 
     <div class="botoes">
-        <button>Entre</button>
-        <button>Criar conta</button>
+        <button id="Entre">Entre</button>
+        <button id="criarconta"> Criar conta</button>
     </div>
 </body>
 </html>

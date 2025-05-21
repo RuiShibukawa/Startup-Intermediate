@@ -4,19 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css  ">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .div-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            align-items: center;
+        }
+        
+    </style>
 </head>
 <body>
     <h2>Crie Sua Conta</h2>
     <p>Já tem seu registro? <a href="TelaDeLogin.Html">clique aqui</a></p>
-    <label for="input-nome">NOME</label>
-    <input type="text" id="input-nome" placeholder="lucas santos da silva"> <br>
-    <label for="input-email">EMAIL</label>
-    <input type="text" id="input-email" placeholder="hello@reallygreatsite.com"><br>
-    <label for="input-senha">SENHA</label>
-    <input type="text" id="input-senha" placeholder="********"><br>
-    <label for="">DATA DE NASCIMENTO</label>
-    <input type="text" id="" placeholder="01/01/2000">
-
-
+    <form action="">
+        <div class="div-form">
+            <label for="input-nome">NOME</label>
+            <input type="text" id="input-nome" placeholder="lucas santos da silva">
+        </div> 
+        <div class="div-form">
+            <label for="input-email">EMAIL</label>
+            <input type="text" id="input-email" placeholder="hello@reallygreatsite.com">
+        </div>
+        <div class="div-form">
+            <label for="input-senha">SENHA</label>
+            <input type="text" id="input-senha" placeholder="********">
+        </div>
+        <div class="div-form">
+            <label for="input-data">DATA DE NASCIMENTO</label>
+            <input type="text" id="input-data" placeholder="01/01/2000">
+        </div>
+        <div>
+            <input type="radio" id="input-psicologo" name="perfil">
+            <label for="input-psicologo">PSICOLOGO</label>
+            <p></p>
+            <input type="radio" id="input-paciente" name="perfil">
+            <label for="input-paciente">PACIENTE</label>
+        </div>
+        <button>Cadastrar</button>
+    </form>
 </body>
 </html>

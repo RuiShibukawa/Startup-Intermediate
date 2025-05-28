@@ -16,9 +16,17 @@
 }
 
 body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main{
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 300px;
     align-items: center;
     gap: 1rem;
     color: var(--texto-padrao);
@@ -31,4 +39,23 @@ body{
 button{
     background-color: var(--cor-botao);
     color: var(--letra-botao);
+    border: 1px solid var(--cor-botao);
+    border-radius: 4px;
 }
+
+input{
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: var(--fundo-input);
+    border: 1px solid var(--fundo-input);
+    border-radius: 4px;
+    font-size: 0.5rem;
+}
+
+.icone{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+

@@ -3,9 +3,15 @@
     --letra-botao: #ffffff;
     --fundo-input: #ececec;
     --texto-padrao: #535353;
+    --cor-texto-geral: #000000;
     --azul-calendario: #3fd5e9;
     --verde-calendario: #4eee0d;
     --vermelho-calendario: #ee0d0d;
+
+    --titulo-um: "Libre Baskerville", serif; 
+    --texto-geral: "Open Sans", sans-serif;
+    --texto-botao-input-label: "Source Sans 3", sans-serif;
+
 }
 
 * {
@@ -16,41 +22,44 @@
 }
 
 body{
-
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 main{
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 400px;
+    height: 750px;
     align-items: center;
     gap: 1rem;
-    color: var(--texto-padrao);
-    margin: 2rem;
+    color: var(--cor-texto-geral);
     padding: 2rem;
     border: 2px solid black;
     border-radius: 1rem;
+    font-family: var(--texto-geral);
 }
 
 button{
     background-color: var(--cor-botao);
     color: var(--letra-botao);
     border: 1px solid var(--cor-botao);
-    border-radius: 4px;
+    border-radius: 8px;
+    font-family: var(--texto-botao-input-label);
+    font-weight: bold;
 }
 
 input{
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.8rem;
     text-align: center;
     background-color: var(--fundo-input);
     border: 1px solid var(--fundo-input);
     border-radius: 4px;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    font-family: var(--texto-botao-input-label);
 }
 
 .icone{
@@ -58,4 +67,28 @@ input{
     height: 1.5rem;
 }
 
+/* Esta estilização são apenas das páginas de login e criar perfil */
+.titulo {
+    font-family: var(--titulo-um);
+    color: var(--texto-padrao);
+}
 
+/* Footer das páginas  */
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+hr{
+    border: 2px solid black;
+}
+.div-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.icone-footer{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+}

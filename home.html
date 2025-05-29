@@ -3,27 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
+    <style>
+        main {
+            background-image: url(img/background.jpg);
+            background-position: center;
+        }
+        .imagem-home{
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+        h2 {
+            font-weight: 550;
+            font-style: italic;
+        }
+        h2 > span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        ul{
+            list-style-type: none;
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        ul > li {
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        p{
+            font-size: 0.8rem;
+        }
+        .icone-msg {
+            margin: 1.5rem 0;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <img src="img/perfilHome.png" alt="Imagem do perfil">
-    <h1>Lucas Santos da Silva</h1> <span>24</span>
-    <ul>
-        <li>
-            <img src="img/iconeTelefone.jpg" alt="Imagem de telefone" class="icone">
-            <span>(44)99999-999</span>
-        </li>
-        <li>
-            <img src="img/iconeLocalizacao.jpg" alt="Imagem de localização" class="icone">
-            <span>Maringá</span>
-        </li>
-        <li>
-            <img src="img/iconeEmail.jpg" alt="Imagem de e-mail" class="icone">
-            <span>hello@reaalygreatsite.com</span>
-        </li>
-
-    </ul>
-    
+    <main>
+        <img src="img/perfilHome.png" alt="Imagem do perfil" class="imagem-home">
+        <h2>Lucas Santos da Silva <span>24</span></h2>
+        <ul>
+            <li>
+                <img src="img/perfil/iconeTelefone.jpg" alt="Imagem de telefone" class="icone">
+                <span>(44)99999-999</span>
+            </li>
+            <li>
+                <img src="img/perfil/iconeLocalizacao.jpg" alt="Imagem de localização" class="icone">
+                <span>Maringá</span>
+            </li>
+            <li>
+                <img src="img/perfil/iconeEmail.jpg" alt="Imagem de e-mail" class="icone">
+                <span>hello@reaalygreatsite.com</span>
+            </li>
+        </ul>
+        <p>Psicólogo com abordagem psicanalítica, especializada no atendimento de crianças e adolescentes. Capaz de auxiliar na prevenção e tratamento de doenças psíquicas, com o foco no aumento da qualidade de vida e no equilíbrio emocional dos pacientes.</p>
+        <a href="mensagem.html">
+            <img src="img/perfil/iconeChat.jpg" alt="Ícone Chat" class="icone-msg">
+        </a>
+        <div class="footer">
+            <hr>
+            <div class="div-footer">
+                <a href="home.html">
+                    <img src="img/footer/iconeHome2.png" alt="Icone de Home" class="icone-footer">
+                </a>
+                <a href="perfil.html">
+                    <img src="img/footer/perfil.png" alt="Icone de perfil" class="icone-footer">
+                </a>
+                <a href="pesquisa.html">
+                    <img src="img/footer/iconeBussula.png" alt="Icone bússula" class="icone-footer">
+                </a>
+                <a href="chat.html">
+                    <img src="img/footer/iconeChatFone.jpg" alt="Icone de chat" class="icone-footer">
+                </a>
+            </div>        
+        </div>
+    </main>
 </body>
 </html>

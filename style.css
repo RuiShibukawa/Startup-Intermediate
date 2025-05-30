@@ -62,6 +62,12 @@ input{
     font-family: var(--texto-botao-input-label);
 }
 
+.imagem-perfil{
+    width: 100%;
+    min-height: 210px;
+    border-radius: 1.5rem;
+}
+
 .icone{
     width: 1.5rem;
     height: 1.5rem;

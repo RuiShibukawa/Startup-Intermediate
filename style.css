@@ -2,11 +2,15 @@
     --cor-botao: #6562df;
     --letra-botao: #ffffff;
     --fundo-input: #ececec;
+    
     --texto-padrao: #535353;
     --cor-texto-geral: #000000;
+
     --azul-calendario: #3fd5e9;
     --verde-calendario: #4eee0d;
     --vermelho-calendario: #ee0d0d;
+    --borda-calendario: #e3bdba;
+    --calendario-hoje: #007bff;
 
     --titulo-um: "Libre Baskerville", serif; 
     --texto-geral: "Open Sans", sans-serif;
@@ -62,7 +66,9 @@ input{
     font-size: 0.6rem;
     font-family: var(--texto-botao-input-label);
 }
-
+a{
+    text-decoration: none;
+}
 .imagem-perfil{
     width: 100%;
     min-height: 210px;
@@ -83,6 +89,66 @@ input{
 .titulo {
     font-family: var(--titulo-um);
     color: var(--texto-padrao);
+}
+/* Estilização dos calendários */
+.calendar {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 350px;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#month-year {
+    font-size: 1.2em;
+    margin-left: -45%;
+    text-transform: uppercase;
+}
+.weekdays {
+    font-size: 0.65em;
+}
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+.weekdays div {
+    padding: 10px 0;
+}
+
+.days div {
+    padding: 10px 0;
+    margin: 2px;
+    border: 1px solid var(--borda-calendario);
+    border-radius: 5px;
+}
+
+.days div.today {
+    background: var(--calendario-hoje);
+    color: var(--letra-botao);
+}
+
+.days div:hover {
+    background: #e0e0e0;
+    cursor: pointer;
+}
+
+.agenda-perfil{
+    background-color: var(--azul-calendario);
+}
+
+.agenda-consulta-livre{
+    background-color: var(--verde-calendario);
+}
+.agenda-consulta-cheia{
+    background-color: var(--vermelho-calendario);
 }
 
 /* Footer das páginas  */

@@ -9,55 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Calendario</title>
     <style>
-        .calendar {
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 350px;
-            padding: 20px;
+        button{
+            padding: 3px;
         }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        #month-year {
-            font-size: 1.2em;
-            margin-left: -45%;
-            text-transform: uppercase;
-        }
-        .weekdays {
-            font-size: 0.65em;
-        }
-        .weekdays, .days {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            text-align: center;
-        }
-
-        .weekdays div {
-            padding: 10px 0;
-        }
-
-        .days div {
-            padding: 10px 0;
-            margin: 2px;
-            border: 1px solid #e3bdba;
-            border-radius: 5px;
-        }
-
-        .days div.today {
-            background: #007bff;
-            color: white;
-        }
-
-        .days div:hover {
-            background: #e0e0e0;
-            cursor: pointer;
-        }
-
     </style>
 </head>
 <body>
@@ -80,7 +34,9 @@
             </div>
             <div class="days"></div>
         </div>
-        <button>Editar Agenda</button>
+        <a href="editarAgenda.html">
+            <button>Editar Agenda</button>
+        </a>
         <div class="footer">
             <hr>
             <div class="div-footer">
@@ -122,14 +78,20 @@
             monthYear.textContent = `${monthNames[month]} ${year}`;
             daysContainer.innerHTML = "";
 
-            for (let i = 0; i < firstDay; i++) {
-
-                daysContainer.innerHTML += `<div>${i}</div>`;
-            }
+            const listaAgenda = [2, 8, 11, 16, 17];
 
             for (let i = 1; i <= lastDate; i++) {
                 const isToday = isCurrentMonth && i === today.getDate();
-                daysContainer.innerHTML += `<div class="${isToday ? "today" : ""}">${i}</div>`;
+                const diaEstaNaLista = listaAgenda.includes(i);
+                if(isToday && diaEstaNaLista){
+                    daysContainer.innerHTML += `<a href="agendaDiaPsi.html"><div class="today agenda-perfil">${i}</div></a>`;
+                } else if (isToday){
+                    daysContainer.innerHTML += `<div class="today">${i}</div>`;
+                } else if (diaEstaNaLista){
+                    daysContainer.innerHTML += `<a href="agendaDiaPsi.html"><div class="agenda-perfil">${i}</div></a>`;
+                } else {
+                    daysContainer.innerHTML += `<div>${i}</div>`;
+                }
             }
         }
 

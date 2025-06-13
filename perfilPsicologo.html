@@ -12,40 +12,82 @@
         .imagem-perfil{
             background-image: url(img/Psicologo.webp);
             background-size: cover;
+            border-radius: 50%;
+            width: 4rem;
+            min-height: 4rem;
+        }
+        .ul-perfil{
+            display: flex;
+            list-style-type: none;
+            gap: 0.6rem;
+        }
+        .li-perfil{
+            display: flex;
+            font-size: 0.4rem;
+        }
+        .icone{
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+        .p-perfil{
+            display: flex;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        .h2-perfil{
+            display: flex;
+            flex-direction: column;
+            align-self:flex-start;
+            font-size: 0.8rem;
+        }
+        .ul-texto{
+            display: flex;
+            flex-direction: column;
+            align-items:baseline;
+            font-size: 0.6rem;
+        }
+        .imagem-agenda{
+            margin-top: -22%;
+            width: 2rem;
+            height: 2rem;
         }
     </style>
 </head>
 <body>
     <main>
         <div class="imagem-perfil"></div>
-        <H1> Yan Makoto</H1>
-        <ul>
-            <li>
+        <H2> Yan Makoto</H2>
+        <ul class="ul-perfil">
+            <li class="li-perfil">
                 <img src="img/perfil/iconeTelefone.jpg" alt="Imagem de telefone" class="icone">
                 <span>(44)9999-9999</span>
             </li>
-            <li>
+            <li class="li-perfil">
                 <img src="img/perfil/iconeLocalizacao.jpg" alt="Imagem de localização" class="icone">
                 <span>Maringá</span>
             </li>
-            <li>
+            <li class="li-perfil">
                 <img src="img/perfil/iconeEmail.jpg" alt="Imagem de e-mail" class="icone">
                 <span>hello@reaalygreatsite.com</span>
             </li>
-            <li>
+            <li class="li-perfil">
                 <img src="img/perfil/iconeLinkTree.jpg" alt="link do curriculo" class="icone">
                 <span>link.ee/CurrículodeCarlos</span>
             </li>
         </ul>
-        <H1>Segunda a Sexta das 08h as 11h/ 14h as 18h</H1>
+        <div class="p-perfil">
+        <p>Segunda a Sexta das 08h as 11h/ 14h as 18h</p>
         <a href="calendario.html?perfil=psicologo">
-            <img src="img/perfil/iconeAgenda.jpg" alt="agenda do Psicologo" class="icone">
+            <img src="img/perfil/iconeAgenda.jpg" alt="agenda do Psicologo" class="icone imagem-agenda">
         </a>
+        </div>
+        <div class="h2-perfil">
         <h2>Um pouco sobre mim</h2>
         <p>Psicóloga Clínica</p>
         <p>Clínica Fala Aberta, Rio de Janeiro,Rj</p>
         <p>Julho de 2021 - Atual</p>
-        <ul>
+        </div>
+        <ul class="ul-texto">
             <li>Efetuei 5 sessões diárias de psicoterapia de apoio, aplicando programas de estimulação cognitiva;</li>
             <li>Acompanhei situações problemáticas e fiz intervenções em crise, controlando os casos sem maiores problemas;</li>
             <li>Criei planos de intervenção personalizados conforme as necessidades individuais de mais de 30 pacientes;</li>

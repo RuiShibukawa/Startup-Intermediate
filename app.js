@@ -1,6 +1,13 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-console.log(urlParams.get('perfil'));
+const usuario = urlParams.get('perfil');
+
+if(usuario === 'paciente'){
+
+} else if(usuario === 'psicologo'){
+
+}
+
 const listaAgenda = [2, 8, 11, 16, 17];
 
 const daysContainer = document.querySelector(".days");

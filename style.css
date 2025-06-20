@@ -85,6 +85,11 @@ a{
     background-position: center;
 }
 
+.texto-geral {
+    font-family: var(--texto-geral);
+    font-size: 1.3em;
+}
+
 /* Esta estilização são apenas das páginas de login e criar perfil */
 .titulo {
     font-family: var(--titulo-um);

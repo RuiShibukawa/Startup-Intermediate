@@ -103,7 +103,7 @@ a{
     padding: 20px;
 }
 
-.header {
+.header-calendario {
     display: flex;
     justify-content: space-between;
     align-items: center;

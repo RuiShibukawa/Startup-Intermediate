@@ -34,9 +34,14 @@
         <input type="password" name="" id="senhaparalogin" placeholder="*********">
         <label for="Entre"></label> 
         <div class="botoes">
-            <button id="Entre">Entre</button>
-            <button id="criarconta"> Criar conta</button>
+            <button id="Entre" onclick="entrar()">Entre</button>
+            <button id="criarconta" onclick="entrar()"> Criar conta</button>
         </div>
     </main>
+    <script>
+        function entrar(){
+            window.location = "crieSuaConta.html";
+        }
+    </script>
 </body>
 </html>

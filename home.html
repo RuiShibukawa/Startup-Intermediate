@@ -74,7 +74,7 @@
                 <a href="home.html">
                     <img src="img/footer/iconeHome2.png" alt="Icone de Home" class="icone-footer">
                 </a>
-                <a href="perfil.html">
+                <a href="perfil.html" id="icone-voltar-perfil">
                     <img src="img/footer/perfil.png" alt="Icone de perfil" class="icone-footer">
                 </a>
                 <a href="pesquisa.html">
@@ -86,5 +86,17 @@
             </div>        
         </div>
     </main>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        let usuario = urlParams.get("perfil");
+        let agenda = urlParams.get("agenda");
+        if (usuario === "" || usuario === null){
+            usuario = "psicologo";
+            agenda = "psicologo";
+        }
+        const btnPerfil = document.getElementById("icone-voltar-perfil"); 
+        btnPerfil.setAttribute("href", `perfil${usuario}.html`);
+    </script>
 </body>
 </html>

@@ -53,6 +53,9 @@
             padding: 1.5rem;
             font-size: 1rem;
         }
+        .botaocriesuaconta>label{
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +65,7 @@
             <p>Já tem seu registro? <a href="TelaDeLogin.Html">entre aqui</a></p>
             
         </div>
-        <form action="">
+        <form id="form01">
             <div class="div-form">
                 <label for="input-nome">NOME</label>
                 <input type="text" id="input-nome" placeholder="lucas santos da silva">
@@ -80,15 +83,41 @@
                 <input type="text" id="input-data" placeholder="01/01/2000">
             </div>
             <div class="botaocriesuaconta">
-                <input type="radio" id="input-psicologo" name="perfil">
-                <label for="input-psicologo">PSICOLOGO</label>
+                <input type="radio" id="input-psicologo" name="perfil" value="Psicologo" checked>
+                <label for="input-psicologo">Psicologo</label>
             </div>
             <div class="botaocriesuaconta">
-                <input type="radio" id="input-paciente" name="perfil">
-                <label for="input-paciente">PACIENTE</label>
+                <input type="radio" id="input-paciente" name="perfil" value="Paciente">
+                <label for="input-paciente">Paciente</label>
             </div>
-            <button>Cadastrar</button>
+            <button type="submit" form="form01" id="btn-entrar">Cadastrar</button>
         </form>
+        
     </main>
+    <script>
+        // function entrar(event){
+        //     event.preventDefault();
+        //     const inputRadios = document.querySelectorAll(`input[name=perfil]`);
+        //     console.log("Entrou funçao");
+        //     inputRadios.forEach(input => {
+        //         if(input.checked){
+        //             window.location = `perfil${input.value}.html`;
+        //         }
+        //     })
+        // }
+        const btnIniciar = document.getElementById("btn-entrar");
+        btnIniciar.addEventListener("click", event => {
+            event.preventDefault();
+            const inputRadios = document.querySelectorAll(`input[name=perfil]`);
+            console.log("Entrou funçao");
+            inputRadios.forEach(input => {
+                if(input.checked){
+                    window.location = `perfil${input.value}.html`;
+                }
+            })
+        })
+
+        
+    </script>
 </body>
 </html>

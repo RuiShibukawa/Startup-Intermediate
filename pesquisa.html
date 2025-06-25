@@ -1,47 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Tela de Pequisa</title>
-    <style>
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Psicólogo</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
+<style>
+ 
+h3 {
+    align-self: flex-start;
+}
+
+.specializations span {
+    width: 33%;
+    padding: 0.8rem;
+}
+
+.specializations {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+
+form {
+    align-self: flex-start;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+select, .search-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.label-horario{
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.horario {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.search-btn {
+    background-color: #6a1b9a;
+    border: none;
+    margin-top: 20px;
+}
+
+</style>
+
 <body>
-    <main class="main-com-background">
-        <div>
-        <h2>Especialização</h2> <span>Adulto</span> <span>Criança</span> <span>Hospitalar</span> <span>Esporte</span>
-        <form action="resultadoPesquisa.html">
-           <label for="">Estado</label>
-           <select>
-            <option value="Estado" aria-placeholder="Selecione o Estado"></option>
-            </select> 
-           <label for="">Cidade</label>
-           <select>
-            <option value="cidade" aria-placeholder="Selecione uma Cidade"></option>
-            </select> 
-           <label for="">Gênero do Psicólogo</label>
-           <select>
-            <option value="Gênero do Psicólogo" aria-placeholder="Selecione o Estado"></option> 
-           </select>
-        <h2>Hórario</h2>
-        <label for="">Manhã</label>
-        <input type="radio" name="Manhã" id="">
-        <label for="">Tarde</label>
-        <input type="radio" name="Tarde" id="">
-        <h2>Tipo de Terapia</h2>
-        <label for=""></label>
-        <select>
-            <option value=""></option>
-        </select>
-        </div>
-        
-        </form>
+  <main class="main-com-background">
+    <h3>Especialização</h3>
+    <section class="specializations">
+      <span>Adulto</span>
+      <span>Infantil</span>
+      <span>Hospitalar</span>
+      <span>Esporte</span>
+    </section>
+
+    <form>
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado">
+        <option>Selecione</option>
+      </select>
+
+      <label for="cidade">Cidade</label>
+      <select id="cidade" name="cidade">
+        <option>Selecione</option>
+      </select>
+
+      <label for="genero">Gênero do psicólogo</label>
+      <select name="genero" id="genero do psicologo">  
+      <option>Selecione</option>
+      </select>
+
+      <fieldset class="horario">
+        <legend>Horário</legend>
+        <label class="label-horario">
+            <input type="radio" name="horario" value="manha"> 
+            Manhã
+        </label>
+        <label class="label-horario">
+            <input type="radio" name="horario" value="tarde"> 
+            Tarde
+        </label>
+      </fieldset>
+
+      <label for="terapia">Tipo de terapia</label>
+      <select id="terapia" name="terapia">
+        <option>Selecione</option>
+      </select>
+          </form>
+
+      <button type="submit" class="search-btn">Pesquisar</button>
+
         <div class="footer">
         <hr>
         <div class="div-footer">
@@ -58,7 +123,7 @@
                 <img src="img/footer/iconeChatFone.jpg" alt="Icone de chat" class="icone-footer">
             </a>
         </div>        
-    </div>
-    </main>
+  </div>
+  </main>
 </body>
 </html>

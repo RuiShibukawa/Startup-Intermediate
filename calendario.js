@@ -70,8 +70,8 @@ function diasUteis(mes){
     let lista = [];
     
     for (let i = 1; i <= lastDate; i++) {
-        const isToday = isCurrentMonth && i === today.getDate();
-        const diaEstaNaLista = lista.includes(i);
+        const diaMesAno = new Date(year, mes, i);
+        
         if(isToday && diaEstaNaLista){
             daysContainer.innerHTML += `<a href="agendaDiaPsi.html"><div class="today agenda-perfil">${i}</div></a>`;
         } else if (isToday){

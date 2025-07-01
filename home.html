@@ -92,8 +92,8 @@
         let usuario = urlParams.get("perfil");
         let agenda = urlParams.get("agenda");
         if (usuario === "" || usuario === null){
-            usuario = "psicologo";
-            agenda = "psicologo";
+            usuario = "Psicologo";
+            agenda = "Psicologo";
         }
         const btnPerfil = document.getElementById("icone-voltar-perfil"); 
         btnPerfil.setAttribute("href", `perfil${usuario}.html`);
